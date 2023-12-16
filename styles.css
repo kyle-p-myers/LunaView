@@ -1,77 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*{ 
+    font-family: 'Quicksand', sans-serif;
+}
 body {
-  background-color: #212121;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden; /* Hide scrollbars */
-}
-
-.card {
-  width: 350px;
-  height: 450px;
-  border-radius: 24px;
-  background: #212121;
-  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-
-.lunar-icon{
-    background-color: aliceblue;
-    width: 310px; 
-    height: 200px;
-    position:absolute;
-    top: 15px;
-    left: 20px;
-    border-radius: 9px;
-}
-
-.phase-name{
-    background-color: aqua;
-    width: 310px;
+    background-color: #212121;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .loading-spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 8px solid #fff;
+    width: 50px;
     height: 50px;
-    position:absolute;
-    top: 230px;
-    left: 20px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the spinner is above other elements */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card {
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 24px;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; /* Ensure the card is above the spinner */
+  }
+  
+  #moonImage {
+    box-shadow: 15px 15px 30px rgb(25, 25, 25);
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     border-radius: 9px;
-}
-.stage{
-    background-color: rgb(202, 89, 255);
-    width: 310px;
+  }
+  .phase-name{
+    margin-top: 10px;
+  }
+  .phase-name,
+  .stage,
+  .moon-counter {
+    color: white;
+    background: #171717;
+    width: 90%; /* Adjust the width as needed */
+    max-width: 300px; /* Set a maximum width */
     height: 50px;
-    position:absolute;
-    top: 295px;
-    left: 20px;
+    margin-bottom: 15px; /* Adjust the spacing between sections */
     border-radius: 9px;
-}
-.moon-counter{
-    background-color: rgb(202, 89, 255);
-    width: 310px;
+    display: flex;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+  }
+  
+  .moon-counter {
     height: 70px;
-    position:absolute;
-    top: 295px;
-    left: 20px;
-    border-radius: 9px;
-}
-
-.full-moon-counter, .new-moon-counter{
-    background-color: darkorange;
-    width:130px;
-    height:70px;
+  }
+  
+  .full-moon-counter,
+  .new-moon-counter {
+    background: #212121;
+    width: 45%; /* Adjust the width as needed */
+    height: 70px;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 2.5%; /* Adjust the spacing between counters */
     padding: 0;
     text-align: center;
     color: rgb(227, 227, 227);
-
-}
-.logo{
-    position: absolute;
-    top: 310px;
-    left: 70px;
+  }
+  
+  .logo {
     height: 50px;
-}
-
-
+  }
+  

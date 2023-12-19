@@ -2,14 +2,12 @@
 *{ 
     font-family: 'Quicksand', sans-serif;
 }
-body {
-    background-color: #212121;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .buttons-container{
+    height: 20vh;
+    width: 90vw;
+    background-color: blue;
+    margin: 0 auto;
   }
   
   .loading-spinner {
@@ -25,7 +23,7 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1; /* Ensure the spinner is above other elements */
   }
-  
+  /*
   @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -38,6 +36,7 @@ body {
   .card {
     width: 80%;
     max-width: 350px;
+    max-height: 500px;
     height: auto;
     border-radius: 24px;
     background: #000000;
@@ -45,52 +44,52 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2; /* Ensure the card is above the spinner */
+    z-index: 2; /* Ensure the card is above the spinner 
   }
-  
-  #moonImage {
-    box-shadow: 15px 15px 30px rgb(25, 25, 25);
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    border-radius: 9px;
-  }
-  .phase-name{
-    margin-top: 10px;
-  }
-  .phase-name,
-  .stage,
-  .moon-counter {
-    color: white;
-    background: #171717;
-    width: 90%; /* Adjust the width as needed */
-    max-width: 300px; /* Set a maximum width */
-    height: 50px;
-    margin-bottom: 15px; /* Adjust the spacing between sections */
-    border-radius: 9px;
-    display: flex;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-  }
-  
-  .moon-counter {
-    height: 70px;
-  }
-  
-  .full-moon-counter,
-  .new-moon-counter {
-    background: #212121;
-    width: 45%; /* Adjust the width as needed */
-    height: 70px;
-    display: inline-block;
-    margin-left: 2.5%; /* Adjust the spacing between counters */
-    padding: 0;
-    text-align: center;
-    color: rgb(227, 227, 227);
-  }
-  
+
   .logo {
     height: 50px;
   }
-  
+  */
+
+  .planet-card{
+    margin: 100px auto;
+    border-radius: 8px;
+    display: flex;  
+    justify-content: center;  
+    align-items: center; 
+    height: 500px;
+    width: 350px;
+    background-color: rgb(29, 29, 29);
+  }
+
+  .planet-details{
+    border-radius: 8px;
+    height: 480px;
+    width: 330px;
+    background-color: rgb(107, 107, 107);
+    z-index: 0;
+  }
+
+  .photo{
+    border-radius: 8px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    height: 200px;
+    width: 330px;
+    background-color: rgb(62, 253, 109);
+    z-index: 1;
+  }
+  .name, .orbit, .temp, .distance{
+    border-radius: 8px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    height: 50px;
+    width: 330px;
+    background-color: rgb(255, 40, 40);
+    z-index: 1;
+  }

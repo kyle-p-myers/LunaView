@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Luna View</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="loading-spinner"></div>
-    <div class="card" id="mainContent">
-      <div id="moonPhaseCard" class="lunar-icon">
-        <img id="moonImage" src="" alt="Moon Phase Image">
-      </div>
-      <div class="phase-name"></div>
-      <div class="moon-counter">
-        <div class="distance"></div>
-      </div>
-      <div class="logo">
-        <img src="kmyers (1).png" height="200px">
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<header>
+  <div class="buttons-container" id="planetButtonsContainer"></div>
+</header>
+<body>
+  <!--<div class="loading-spinner"></div> -->
+  
+    <div class="planet-card" id="planetInfoCard">
+      <div class="planet-details">
+        <div class="photo"></div>
+        <div class="name">${planetData.name}</div>
+        <div class="orbit">${planetData.period}</div>
+        <div class="temp">${planetData.max_temperature}</div>
+        <div class="distance">${planetData.distance_light_year}</div>
+     </div>
     </div>
-
-    <script src="script.js"></script>
-  </body>
+   <!-- <div class="logo">
+      <img src="kmyers (1).png" height="200px">
+    </div>-->
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="script.js"></script>
+ 
+</body>
 </html>

@@ -8,14 +8,13 @@
 </head>
 <body>
   <div class="planet-selector" id="planetSelector">
-    <button onclick="selectPlanet(0)">Mercury</button>
-    <button onclick="selectPlanet(1)">Venus</button>
-    <button onclick="selectPlanet(2)">Earth</button>
-    <button onclick="selectPlanet(3)">Mars</button>
-    <button onclick="selectPlanet(4)">Jupiter</button>
-    <button onclick="selectPlanet(5)">Saturn</button>
-    <button onclick="selectPlanet(6)">Uranus</button>
-    <button onclick="selectPlanet(7)">Neptune</button>
+    <button onclick="selectPlanet(1)">Merucry</button>
+    <button onclick="selectPlanet(2)">Venus</button>
+    <button onclick="selectPlanet(3)">Earth</button>
+    <button onclick="selectPlanet(4)">Mars</button>
+    <button onclick="selectPlanet(5)">Jupiter</button>
+    <button onclick="selectPlanet(6)">Saturn</button>
+    <button onclick="selectPlanet(7)">Uranus</button>
   </div>
   <div class="planet-card" id="planetInfoCard">
     <div class="planet-details" id="planetDetails">
@@ -27,6 +26,27 @@
         <div class="mass" id="planetMass"></div>
       </div>
     </div>
+  </div>
+
+  <div class="project-description">
+    <p>
+      Description<br><br>
+A web application that uses HTML, CSS, and JavaScript to provide an interactive exploration of our solar system. Built with a responsive design, the application allows users to click on planet buttons to dynamically load and display detailed information about each planet.
+<br><br>
+Key Technical Features
+<br><br>
+HTML5 The structure of the application is built using HTML5 for semantic and organized content.<br><br>
+CSS3 Styling is enhanced with CSS3 to create an aesthetically pleasing and responsive user interface.<br><br>
+JavaScript Leveraging the power of JavaScript, PlanetExplorer dynamically fetches data from an external API, populating the planet details in real-time.<br><br>
+AJAX (XMLHttpRequest) Asynchronous data retrieval is achieved using AJAX, ensuring a smooth and seamless user experience.<br><br>
+JSON Parsing The application parses JSON data received from a planets API, extracting relevant information for display.<br><br>
+How it Works:<br><br>
+
+i Users click on planet buttons in the intuitive selector.<br>
+ii JavaScript handles the asynchronous communication with a planets API.<br>
+iii JSON data is parsed and dynamically presented on the page.<br>
+iv A fade-in animation enhances the user experience, making the content visually appealing.
+    </p>
   </div>
   <script src="script.js"></script>
 </body>

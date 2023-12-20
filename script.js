@@ -26,19 +26,16 @@ document.addEventListener('DOMContentLoaded', function () {
   xhr.send();
 });
 
-let content = document.getElementById("planet-selector");
+let planetCard = document.getElementById("planetDetails");
 
 function animation() {
-  content.innerHTML = htmlcontent;
-  
-  content.classList.add("animate");
-  
-  setTimeout(function() {
-    content.classList.remove("animate");
-  }, 500);
+  planetCard.style.opacity = 0;
+  planetCard.classList.add("fade-in");
+
+  setTimeout(function () {
+    planetCard.style.opacity = 1;
+  }, 10); // Adjust the timing as needed
 }
-
-
 
 let currentPlanetIndex = 0; // Variable to keep track of the currently displayed planet
 
@@ -55,6 +52,9 @@ function updatePlanetInfo(planetData) {
     const photoElement = document.getElementById('planetPhoto');
     photoElement.style.backgroundImage = `url('${currentPlanet.imgSrc.img}')`;
     photoElement.setAttribute('title', currentPlanet.imgSrc.imgDescription);
+
+    // Trigger the fade-in animation
+    animation();
   }
 }
 

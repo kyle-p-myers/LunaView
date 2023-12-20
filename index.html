@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet Information</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<header>
-  <div class="buttons-container" id="planetButtonsContainer"></div>
-</header>
 <body>
-  <!--<div class="loading-spinner"></div> -->
-  
-    <div class="planet-card" id="planetInfoCard">
-      <div class="planet-details">
-        <div class="photo"></div>
-        <div class="name">${planetData.name}</div>
-        <div class="orbit">${planetData.period}</div>
-        <div class="temp">${planetData.max_temperature}</div>
-        <div class="distance">${planetData.distance_light_year}</div>
-     </div>
-    </div>
-   <!-- <div class="logo">
-      <img src="kmyers (1).png" height="200px">
-    </div>-->
+  <div class="planet-selector" id="planetSelector">
+    <button onclick="selectPlanet(0)">Mercury</button>
+    <button onclick="selectPlanet(1)">Venus</button>
+    <button onclick="selectPlanet(2)">Earth</button>
+    <button onclick="selectPlanet(3)">Mars</button>
+    <button onclick="selectPlanet(4)">Jupiter</button>
+    <button onclick="selectPlanet(5)">Saturn</button>
+    <button onclick="selectPlanet(6)">Uranus</button>
+    <button onclick="selectPlanet(7)">Neptune</button>
   </div>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <div class="planet-card" id="planetInfoCard">
+    <div class="planet-details">
+      <div class="photo" id="planetPhoto"></div>
+      <div class="info">
+        <div class="name" id="planetName"></div>
+        <div class="description" id="planetDescription"></div>
+        <div class="volume" id="planetVolume"></div>
+        <div class="mass" id="planetMass"></div>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
- 
 </body>
 </html>
